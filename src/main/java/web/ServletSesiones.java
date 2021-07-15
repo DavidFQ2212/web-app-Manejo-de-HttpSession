@@ -39,6 +39,8 @@ public class ServletSesiones extends HttpServlet{
            sesion.setAttribute("contadorVisitas", contadorVisitas);
         //mandamos la respuesta a l cliente
         PrintWriter out = response.getWriter();
+        out.println(titulo);
+        out.println("<br>");
         out.println("no. de accesos al recurso:"+contadorVisitas);
         out.println("<br>");
         out.println("id de la secion:"+sesion.getId());
